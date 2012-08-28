@@ -17,6 +17,12 @@ describe FeedParser do
     opts[:redirect] = true if RUBY_VERSION >= '1.9'
     opts
   end
+  
+  describe "breaking specs" do
+    it "should not work" do
+      1.should == 2
+    end
+  end
 
   describe "#new" do
     it "should forward given http options to the OpenURI" do
