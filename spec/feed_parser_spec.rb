@@ -18,12 +18,6 @@ describe FeedParser do
     opts
   end
   
-  describe "breaking specs" do
-    it "should really really not work" do
-      1.should == 2
-    end
-  end
-
   describe "#new" do
     it "should forward given http options to the OpenURI" do
       FeedParser.any_instance.should_receive(:open).with("http://blog.example.com/feed/", http_connection_options.merge(:ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)).and_return(feed_xml)
