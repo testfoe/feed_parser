@@ -19,7 +19,7 @@ describe FeedParser do
   end
   
   describe "breaking specs" do
-    it "should really not work" do
+    it "should really really not work" do
       1.should == 2
     end
   end
